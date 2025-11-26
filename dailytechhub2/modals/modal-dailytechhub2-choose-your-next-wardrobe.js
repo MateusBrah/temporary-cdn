@@ -196,11 +196,6 @@ const SwipeModal = {
     
     if (resultDiv) {
       resultDiv.style.display = 'block';
-      
-      const resultText = resultDiv.querySelector('.result-text');
-      if (resultText && !resultText.textContent.trim()) {
-        resultText.textContent = 'Você avaliou ' + (this.leftCount + this.rightCount) + ' itens!';
-      }
     }
 
     const btn = this.modal.querySelector('.ddmp-btn-primary');
