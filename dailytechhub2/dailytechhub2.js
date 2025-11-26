@@ -1,5 +1,5 @@
 // DDMPADS - Daily Tech Hub
-// Gerado em: 2025-11-26T14:13:00.674Z
+// Gerado em: 2025-11-26T14:14:52.554Z
 // Rewarded Ads: ATIVADO
 // Modais: 2 disponíveis
 
@@ -9,7 +9,7 @@ const AD_UNITS={"d":{"t":["rewarded"],"s":["all"],"c":["all"],"v":[""],"p":["*"]
 const PRICE_RULES={"tree":{},"flat":{}};
 const FALLBACK_MODAL=null;
 const CUSTOM_MODALS=[{"id":"cmif7b1na000dn9lxsd6hvf52","slug":"escolha-seu-estilo-de-roupa","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-escolha-seu-estilo-de-roupa.js"},{"id":"cmig334rv0005ozr5jl020wow","slug":"choose-your-next-wardrobe","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-choose-your-next-wardrobe.js"}];
-const MODAL_RULES=[{"modalId":"cmig334rv0005ozr5jl020wow","priority":10,"paths":["/quantum-computing-us-labs"],"sources":["teste"],"geos":["all"],"devices":["*"]},{"modalId":"cmif7b1na000dn9lxsd6hvf52","priority":10,"paths":["/quantum-computing-us-labs"],"sources":["*"],"geos":["all"],"devices":["*"]}];
+const MODAL_RULES=[{"modalId":"cmig334rv0005ozr5jl020wow","priority":10,"paths":["/quantum-computing-us-labs"],"sources":["teste"],"geos":["all"],"devices":["*"]},{"modalId":"cmif7b1na000dn9lxsd6hvf52","priority":10,"paths":["/quantum-computing-us-labs"],"sources":["*"],"geos":["br"],"devices":["*"]}];
 
 class ModalMatcher {
   /**
