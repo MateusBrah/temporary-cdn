@@ -1,5 +1,5 @@
 // DDMPADS - Daily Tech Hub
-// Gerado em: 2025-11-26T15:44:12.080Z
+// Gerado em: 2025-11-26T16:11:20.662Z
 // Rewarded Ads: ATIVADO
 // Modais: 3 disponíveis
 
@@ -118,7 +118,7 @@ class ModalLoader {
     this.pendingLoads.set(key, []);
 
     // Monta URL do arquivo do modal
-      const url = "https://cdn.jsdelivr.net/gh/MateusBrah/temporary-cdn@abc/dailytechhub2/modals/modal-dailytechhub2-escolha-sua-roupa-agora.js?v=222123";
+      const url = "https://cdn.jsdelivr.net/gh/MateusBrah/temporary-cdn@abc/dailytechhub2/dailytechhub2.js?v=222123";
 
 
     // Cria script tag para carregar o modal
