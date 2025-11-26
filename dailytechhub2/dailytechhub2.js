@@ -1,15 +1,15 @@
 // DDMPADS - Daily Tech Hub
-// Gerado em: 2025-11-26T14:00:21.675Z
+// Gerado em: 2025-11-26T14:13:00.674Z
 // Rewarded Ads: ATIVADO
-// Modais: 1 disponíveis
+// Modais: 2 disponíveis
 
 (function(){'use strict';
 const CONFIG={"g":"136870988","p":"dailytechhub.net","dp":"0","pk":"ddmp_price","fn":"dailytechhub2.js","sn":"Daily Tech Hub","refresh":{"enabled":true,"delay":30,"interval":30,"maxCount":0},"rw":true,"rp":["/quantum-computing-us-labs"],"_rewardedMeta":{"rpagesRegex":["^/quantum-computing-us-labs$"],"hasRewarded":true}};
 const AD_UNITS={"d":{"t":["rewarded"],"s":["all"],"c":["all"],"v":[""],"p":["*"],"sz":[],"di":[],"pr":[]},"m":[[0,0,0,0,0,71]],"k":[[0,0,0,0,0,67]],"mk":{"all|all|rewarded":[0]},"kk":{"all|all|rewarded":[0]}};
 const PRICE_RULES={"tree":{},"flat":{}};
 const FALLBACK_MODAL=null;
-const CUSTOM_MODALS=[{"id":"cmif7b1na000dn9lxsd6hvf52","slug":"escolha-seu-estilo-de-roupa","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-escolha-seu-estilo-de-roupa.js"}];
-const MODAL_RULES=[{"modalId":"cmif7b1na000dn9lxsd6hvf52","priority":10,"paths":["/quantum-computing-us-labs"],"sources":["*"],"geos":["all"],"devices":["*"]}];
+const CUSTOM_MODALS=[{"id":"cmif7b1na000dn9lxsd6hvf52","slug":"escolha-seu-estilo-de-roupa","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-escolha-seu-estilo-de-roupa.js"},{"id":"cmig334rv0005ozr5jl020wow","slug":"choose-your-next-wardrobe","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-choose-your-next-wardrobe.js"}];
+const MODAL_RULES=[{"modalId":"cmig334rv0005ozr5jl020wow","priority":10,"paths":["/quantum-computing-us-labs"],"sources":["teste"],"geos":["all"],"devices":["*"]},{"modalId":"cmif7b1na000dn9lxsd6hvf52","priority":10,"paths":["/quantum-computing-us-labs"],"sources":["*"],"geos":["all"],"devices":["*"]}];
 
 class ModalMatcher {
   /**
@@ -118,7 +118,7 @@ class ModalLoader {
     this.pendingLoads.set(key, []);
 
     // Monta URL do arquivo do modal
-      const url = "https://cdn.jsdelivr.net/gh/MateusBrah/temporary-cdn@tt/dailytechhub2/modals/modal-dailytechhub2-escolha-seu-estilo-de-roupa.js?v=222123";
+      const url = "https://cdn.jsdelivr.net/gh/MateusBrah/temporary-cdn@abc/dailytechhub2/dailytechhub2.js?v=222123";
 
 
     // Cria script tag para carregar o modal
