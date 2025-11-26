@@ -118,7 +118,7 @@ class ModalLoader {
     this.pendingLoads.set(key, []);
 
     // Monta URL do arquivo do modal
-      const url = "https://cdn.jsdelivr.net/gh/MateusBrah/temporary-cdn@abc/dailytechhub2/dailytechhub2.js?v=222123";
+      const url = "https://cdn.jsdelivr.net/gh/MateusBrah/temporary-cdn@ads/dailytechhub2/dailytechhub2.js?v=222123";
 
 
     // Cria script tag para carregar o modal
