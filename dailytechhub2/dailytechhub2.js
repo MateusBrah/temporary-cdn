@@ -1,10 +1,10 @@
 // DDMPADS - Daily Tech Hub
-// Gerado em: 2025-12-10T14:37:28.323Z
+// Gerado em: 2025-12-10T14:40:06.500Z
 // Rewarded Ads: ATIVADO
 // Modais: 4 disponíveis
 
 (function(){'use strict';
-const CONFIG={"g":"136870988","p":"dailytechhub.net","dp":"0","pk":"ddmp_price","fn":"dailytechhub2.js","sn":"Daily Tech Hub","refresh":{"enabled":true,"delay":30,"interval":30,"maxCount":0},"naming":{"order":["prefix","device","position"],"fallbacks":{"general":true,"noDevice":true,"deviceFormat":"short"},"deviceFormat":"short","includeDevice":true,"includeSource":false,"includeCountry":false,"includeVersion":false},"rw":true,"rp":["/quantum-computing-us-labs"],"_rewardedMeta":{"rpagesRegex":["^/quantum-computing-us-labs$"],"hasRewarded":true}};
+const CONFIG={"g":"136870988","p":"dailytechhub.net","dp":"0","pk":"ddmp_price","fn":"dailytechhub2.js","sn":"Daily Tech Hub","refresh":{"enabled":true,"delay":30,"interval":30,"maxCount":0},"naming":{"order":["prefix","device","country","version","source","position"],"fallbacks":{"general":true,"noDevice":true,"deviceFormat":"short"},"deviceFormat":"long","includeDevice":true,"includeSource":true,"includeCountry":true,"includeVersion":true},"rw":true,"rp":["/quantum-computing-us-labs"],"_rewardedMeta":{"rpagesRegex":["^/quantum-computing-us-labs$"],"hasRewarded":true}};
 const AD_UNITS={"d":{"t":["rewarded","top"],"s":["all"],"c":["all"],"v":[""],"p":["*"],"sz":[[[300,250],[336,280],[null,null]]],"di":["div-top"],"pr":[]},"m":[[0,0,0,0,0,71],[1,0,0,0,0,5,0,0]],"k":[[0,0,0,0,0,67]],"mk":{"all|all|rewarded":[0],"all|all|top":[1]},"kk":{"all|all|rewarded":[0]}};
 const PRICE_RULES={"tree":{},"flat":{}};
 const FALLBACK_MODAL=null;
