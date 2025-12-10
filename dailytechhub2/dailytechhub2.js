@@ -1,11 +1,11 @@
 // DDMPADS - Daily Tech Hub
-// Gerado em: 2025-12-10T15:43:12.667Z
+// Gerado em: 2025-12-10T15:48:06.276Z
 // Rewarded Ads: ATIVADO
 // Modais: 4 disponíveis
 
 (function(){'use strict';
 const CONFIG={"g":"136870988","p":"dailytechhub.net","dp":"0","pk":"ddmp_price","fn":"dailytechhub2.js","sn":"Daily Tech Hub","refresh":{"enabled":true,"delay":30,"interval":30,"maxCount":0},"naming":{"order":["prefix","country","source","device","version","position"],"fallbacks":{"general":true,"noDevice":true,"deviceFormat":"short"},"deviceFormat":"long","includeDevice":true,"includeSource":true,"includeCountry":true,"includeVersion":true},"rw":true,"rp":["/quantum-computing-us-labs"],"_rewardedMeta":{"rpagesRegex":["^/quantum-computing-us-labs$"],"hasRewarded":true}};
-const AD_UNITS={"d":{"t":["rewarded","top"],"s":["all"],"c":["al","all"],"v":[""],"p":["*","/doidao"],"sz":[[[300,250],[336,280],[null,null]]],"di":["div-top"],"pr":[]},"m":[[-1,-1,-1,0,0,71],[-1,-1,-1,0,0,5,0,0]],"k":[[-1,-1,-1,0,1,71]],"mk":{"all|all|rewarded":[0],"all|all|top":[1]},"kk":{},"kp":{"/doidao":[0]}};
+const AD_UNITS={"d":{"t":["rewarded","top"],"s":["all"],"c":["al","all"],"v":[""],"p":["*","/doidao"],"sz":[[[300,250],[336,280],[null,null]]],"di":["div-top"],"pr":[]},"m":[[0,0,1,0,0,71],[1,0,1,0,0,5,0,0]],"k":[[0,0,0,0,1,71]],"mk":{"all|all|rewarded":[0],"all|all|top":[1]},"kk":{},"kp":{"/doidao":[0]}};
 const PRICE_RULES={"tree":{},"flat":{}};
 const FALLBACK_MODAL=null;
 const CUSTOM_MODALS=[{"id":"cmif7b1na000dn9lxsd6hvf52","slug":"escolha-seu-estilo-de-roupa","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-escolha-seu-estilo-de-roupa.js"},{"id":"cmig334rv0005ozr5jl020wow","slug":"choose-your-next-wardrobe","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-choose-your-next-wardrobe.js"},{"id":"cmig6cf0m00012w5k43pvzohk","slug":"escolha-sua-roupa-agora","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-escolha-sua-roupa-agora.js"},{"id":"cmimiyn3x0003stg4x9zflq1i","slug":"modal","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-modal.js"}];
