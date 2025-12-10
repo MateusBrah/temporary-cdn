@@ -26,13 +26,12 @@ const SwipeModal = {
 
     const container = document.createElement('div');
     container.className = 'ddmp-modal-' + modalConfig.slug;
-    container.innerHTML = '<div class="ddmp-modal-container"><div class=\"swipe-header\">  <h1>👗 Descubra seu Estilo</h1>  <div class=\"swipe-counter\">    <span class=\"swipe-left-count\">      <span class=\"counter-icon\">👎</span>      <span class=\"counter-value\">0</span>    </span>    <span class=\"swipe-right-count\">      <span class=\"counter-icon\">❤️</span>      <span class=\"counter-value\">0</span>    </span>  </div></div><div class=\"ddmp-modal-body\">  <div class=\"swipe-instruction\">    <p>Deslize os cards ou use os botões para escolher</p>  </div>    <div class=\"swipe-stack\"></div>    <div class=\"swipe-actions\">    <button class=\"swipe-btn swipe-btn-left\" data-action=\"left\">      <span class=\"btn-icon\">✕</span>      <span class=\"btn-label\">Não</span>    </button>    <button class=\"swipe-btn swipe-btn-right\" data-action=\"right\">      <span class=\"btn-icon\">♥</span>      <span class=\"btn-label\">Sim</span>    </button>  </div>    <div class=\"swipe-result\" style=\"display: none;\">    <div class=\"result-icon\">🎁</div>    <h2 class=\"result-text\">Perfeito!</h2>    <p class=\"result-subtitle\">Seu desconto exclusivo está pronto</p>    <button class=\"ddmp-btn-primary\">Resgatar Cupom</button>  </div></div></div>';
+    container.innerHTML = '<div class="ddmp-modal-container"><div class=\"swipe-header\">  <h1>👗 Descubra seu Estilo</h1>  <div class=\"swipe-counter\">    <span class=\"swipe-left-count\">      <span class=\"counter-icon\">👎</span>      <span class=\"counter-value\">0</span>    </span>    <span class=\"swipe-right-count\">      <span class=\"counter-icon\">❤️</span>      <span class=\"counter-value\">0</span>    </span>  </div></div><div class=\"ddmp-modal-body\">  <div class=\"swipe-instruction\">    <p>Deslize os cards ou use os botões para escolher</p>  </div>    <div class=\"swipe-stack\"></div>    <div class=\"swipe-actions\">    <button class=\"swipe-btn swipe-btn-left\" data-action=\"left\">      <span class=\"btn-icon\">✕</span>      <span class=\"btn-label\">Não</span>    </button>    <button class=\"swipe-btn swipe-btn-right\" data-action=\"right\">      <span class=\"btn-icon\">♥</span>      <span class=\"btn-label\">Sim</span>    </button>  </div>    <div class=\"swipe-result\" style=\"display: none;\">    <div class=\"result-icon\">🎁</div>    <h2 class=\"result-text\">Perfeito!</h2>    <p class=\"result-subtitle\">Seu desconto exclusivo está pronto</p>    <button class=\"ddmp-btn-primary\">Resgatar Cupom</button>  </div></div><script>  function swipeCard(direction) {    const modal = window.DDMPADS_MODALS['choose-your-next-wardrobe'];    if (modal) modal.swipeCard(direction);  }    function handleSwipeComplete() {    const modal = window.DDMPADS_MODALS['choose-your-next-wardrobe'];    if (modal) modal.complete();  }</script></div>';
 
     this.modal = container;
     document.body.appendChild(container);
     
     this.renderCards();
-    this.setupButtons();
   },
 
   renderCards: function() {
@@ -80,22 +79,6 @@ const SwipeModal = {
     topCard.addEventListener('touchstart', function(e) { SwipeModal.onDragStart(e.touches[0], topCard); });
     document.addEventListener('touchmove', function(e) { SwipeModal.onDragMove(e.touches[0], topCard); });
     document.addEventListener('touchend', function(e) { SwipeModal.onDragEnd(e.changedTouches[0], topCard); });
-  },
-
-  setupButtons: function() {
-    const leftBtn = this.modal.querySelector('.swipe-btn-left');
-    const rightBtn = this.modal.querySelector('.swipe-btn-right');
-
-    if (leftBtn) {
-      leftBtn.addEventListener('click', function() {
-        SwipeModal.swipeCard('left');
-      });
-    }
-    if (rightBtn) {
-      rightBtn.addEventListener('click', function() {
-        SwipeModal.swipeCard('right');
-      });
-    }
   },
 
   onDragStart: function(e, card) {
@@ -196,13 +179,6 @@ const SwipeModal = {
     
     if (resultDiv) {
       resultDiv.style.display = 'block';
-    }
-
-    const btn = this.modal.querySelector('.ddmp-btn-primary');
-    if (btn) {
-      btn.addEventListener('click', function() {
-        SwipeModal.complete();
-      });
     }
   },
 
