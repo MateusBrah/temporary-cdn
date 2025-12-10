@@ -1,14 +1,14 @@
 // DDMPADS - Daily Tech Hub
-// Gerado em: 2025-11-26T16:22:47.367Z
+// Gerado em: 2025-12-10T14:37:28.323Z
 // Rewarded Ads: ATIVADO
-// Modais: 3 disponíveis
+// Modais: 4 disponíveis
 
 (function(){'use strict';
-const CONFIG={"g":"136870988","p":"dailytechhub.net","dp":"0","pk":"ddmp_price","fn":"dailytechhub2.js","sn":"Daily Tech Hub","refresh":{"enabled":true,"delay":30,"interval":30,"maxCount":0},"rw":true,"rp":["/quantum-computing-us-labs"],"_rewardedMeta":{"rpagesRegex":["^/quantum-computing-us-labs$"],"hasRewarded":true}};
-const AD_UNITS={"d":{"t":["rewarded"],"s":["all"],"c":["all"],"v":[""],"p":["*"],"sz":[],"di":[],"pr":[]},"m":[[0,0,0,0,0,71]],"k":[[0,0,0,0,0,67]],"mk":{"all|all|rewarded":[0]},"kk":{"all|all|rewarded":[0]}};
+const CONFIG={"g":"136870988","p":"dailytechhub.net","dp":"0","pk":"ddmp_price","fn":"dailytechhub2.js","sn":"Daily Tech Hub","refresh":{"enabled":true,"delay":30,"interval":30,"maxCount":0},"naming":{"order":["prefix","device","position"],"fallbacks":{"general":true,"noDevice":true,"deviceFormat":"short"},"deviceFormat":"short","includeDevice":true,"includeSource":false,"includeCountry":false,"includeVersion":false},"rw":true,"rp":["/quantum-computing-us-labs"],"_rewardedMeta":{"rpagesRegex":["^/quantum-computing-us-labs$"],"hasRewarded":true}};
+const AD_UNITS={"d":{"t":["rewarded","top"],"s":["all"],"c":["all"],"v":[""],"p":["*"],"sz":[[[300,250],[336,280],[null,null]]],"di":["div-top"],"pr":[]},"m":[[0,0,0,0,0,71],[1,0,0,0,0,5,0,0]],"k":[[0,0,0,0,0,67]],"mk":{"all|all|rewarded":[0],"all|all|top":[1]},"kk":{"all|all|rewarded":[0]}};
 const PRICE_RULES={"tree":{},"flat":{}};
 const FALLBACK_MODAL=null;
-const CUSTOM_MODALS=[{"id":"cmif7b1na000dn9lxsd6hvf52","slug":"escolha-seu-estilo-de-roupa","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-escolha-seu-estilo-de-roupa.js"},{"id":"cmig334rv0005ozr5jl020wow","slug":"choose-your-next-wardrobe","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-choose-your-next-wardrobe.js"},{"id":"cmig6cf0m00012w5k43pvzohk","slug":"escolha-sua-roupa-agora","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-escolha-sua-roupa-agora.js"}];
+const CUSTOM_MODALS=[{"id":"cmif7b1na000dn9lxsd6hvf52","slug":"escolha-seu-estilo-de-roupa","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-escolha-seu-estilo-de-roupa.js"},{"id":"cmig334rv0005ozr5jl020wow","slug":"choose-your-next-wardrobe","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-choose-your-next-wardrobe.js"},{"id":"cmig6cf0m00012w5k43pvzohk","slug":"escolha-sua-roupa-agora","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-escolha-sua-roupa-agora.js"},{"id":"cmimiyn3x0003stg4x9zflq1i","slug":"modal","fileUrl":"https://ddmpads-cdn.pages.dev/dailytechhub2/modals/modal-dailytechhub2-modal.js"}];
 const MODAL_RULES=[{"modalId":"cmig6cf0m00012w5k43pvzohk","priority":20,"paths":["/quantum-computing-us-labs"],"sources":["*"],"geos":["all"],"devices":["*"]},{"modalId":"cmig334rv0005ozr5jl020wow","priority":10,"paths":["/quantum-computing-us-labs"],"sources":["teste"],"geos":["all"],"devices":["*"]},{"modalId":"cmif7b1na000dn9lxsd6hvf52","priority":10,"paths":["/quantum-computing-us-labs"],"sources":["*"],"geos":["br"],"devices":["*"]}];
 
 class ModalMatcher {
@@ -117,9 +117,16 @@ class ModalLoader {
     // Inicializa lista de callbacks pendentes
     this.pendingLoads.set(key, []);
 
-    // Monta URL do arquivo do modal
-      const url = "https://cdn.jsdelivr.net/gh/MateusBrah/temporary-cdn@ads/dailytechhub2/dailytechhub2.js?v=222123";
-
+    // Busca URL do modal no array CUSTOM_MODALS baseado no slug
+    const modalData = CUSTOM_MODALS.find(m => m.slug === slug);
+    if (!modalData || !modalData.fileUrl) {
+      console.error("Modal não encontrado em CUSTOM_MODALS:", slug);
+      callback && callback(null);
+      this.pendingLoads.delete(key);
+      return;
+    }
+    
+    const url = modalData.fileUrl;
 
     // Cria script tag para carregar o modal
     const script = document.createElement("script");
@@ -301,7 +308,72 @@ if (document.readyState === "loading") {
 } else {
   window.ModalLoader.init();
 }
-const FLAGS={ENABLED:1,OOP:2,NR:4,LAZY:8,CUSTOM_PATH:16,HAS_PRICE:32,REWARDED:64};class UD{constructor(d){this.d=d.d;this.m=d.m;this.k=d.k;this.mk=d.mk;this.kk=d.kk;this.mp=d.mp;this.kp=d.kp;this.mt=d.mt;this.kt=d.kt}getUnit(dv,i){const u=(dv==="mobile"?this.m:this.k)[i];if(!u)return null;const[ti,si,ci,vi,pi,f,szi,dii,pri]=u,unit={t:this.d.t[ti],s:this.d.s[si],c:this.d.c[ci],page:this.d.p[pi]};if(vi>0)unit.v=this.d.v[vi];if(f&FLAGS.ENABLED)unit.e=true;if(f&FLAGS.OOP)unit.oop=true;if(f&FLAGS.NR)unit.nr=true;if(f&FLAGS.REWARDED)unit.rw=true;if(szi!==undefined){unit.sz=this.d.sz[szi];unit.di=dii!==undefined?this.d.di[dii]:`div-${unit.t}`}if(f&FLAGS.HAS_PRICE&&pri!==undefined)unit.pr=this.d.pr[pri];return unit}rebuild(){return{mobile:this.rebuildDevice("mobile"),desktop:this.rebuildDevice("desktop")}}rebuildDevice(dv){const units=[],byKey={},byPage={},patterns=[],dk=dv==="mobile",data=dk?this.m:this.k,keys=dk?this.mk:this.kk,pages=dk?this.mp:this.kp,pats=dk?this.mt:this.kt;data.forEach((_,idx)=>{const unit=this.getUnit(dv,idx);if(!unit)return;units.push(unit);unit._score=((unit.page&&unit.page!=="*")?8:0)+((unit.s!=="all")?4:0)+((unit.c!=="all")?2:0)+(unit.v?1:0)});if(keys){Object.entries(keys).forEach(([k,idxs])=>{byKey[k]=idxs.map(i=>units[i])})}if(pages){Object.entries(pages).forEach(([p,idxs])=>{byPage[p]=idxs.map(i=>units[i])})}if(pats){pats.forEach(([idx,regex])=>{const unit=units[idx];if(unit){unit._regex=regex;patterns.push(unit)}})}return{a:units,bk:byKey,bp:byPage,pt:patterns}}}const Utils={isMobile:()=>/Mobi|Android/i.test(navigator.userAgent)||768>=window.innerWidth,getGeo(){const a=new URLSearchParams(window.location.search),b=a.get("test_geo")||a.get("geo");if(b)return sessionStorage.setItem("ddmp_geo",b.toUpperCase()),b.toUpperCase();const c=sessionStorage.getItem("ddmp_geo");return c||"all"},getUtmParams(){const a=new URLSearchParams(window.location.search),b={};return["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(c=>{b[c]=a.get(c)||sessionStorage.getItem(c)||"direct",a.get(c)&&sessionStorage.setItem(c,a.get(c))}),b}};class DDMPAds {
+const FLAGS={ENABLED:1,OOP:2,NR:4,LAZY:8,CUSTOM_PATH:16,HAS_PRICE:32,REWARDED:64};class UD{constructor(d){this.d=d.d;this.m=d.m;this.k=d.k;this.mk=d.mk;this.kk=d.kk;this.mp=d.mp;this.kp=d.kp;this.mt=d.mt;this.kt=d.kt}getUnit(dv,i){const u=(dv==="mobile"?this.m:this.k)[i];if(!u)return null;const[ti,si,ci,vi,pi,f,szi,dii,pri]=u,unit={t:this.d.t[ti],s:this.d.s[si],c:this.d.c[ci],page:this.d.p[pi]};if(vi>0)unit.v=this.d.v[vi];if(f&FLAGS.ENABLED)unit.e=true;if(f&FLAGS.OOP)unit.oop=true;if(f&FLAGS.NR)unit.nr=true;if(f&FLAGS.REWARDED)unit.rw=true;if(szi!==undefined){unit.sz=this.d.sz[szi];unit.di=dii!==undefined?this.d.di[dii]:`div-${unit.t}`}if(f&FLAGS.HAS_PRICE&&pri!==undefined)unit.pr=this.d.pr[pri];return unit}rebuild(){return{mobile:this.rebuildDevice("mobile"),desktop:this.rebuildDevice("desktop")}}rebuildDevice(dv){const units=[],byKey={},byPage={},patterns=[],dk=dv==="mobile",data=dk?this.m:this.k,keys=dk?this.mk:this.kk,pages=dk?this.mp:this.kp,pats=dk?this.mt:this.kt;data.forEach((_,idx)=>{const unit=this.getUnit(dv,idx);if(!unit)return;units.push(unit);unit._score=((unit.page&&unit.page!=="*")?8:0)+((unit.s!=="all")?4:0)+((unit.c!=="all")?2:0)+(unit.v?1:0)});if(keys){Object.entries(keys).forEach(([k,idxs])=>{byKey[k]=idxs.map(i=>units[i])})}if(pages){Object.entries(pages).forEach(([p,idxs])=>{byPage[p]=idxs.map(i=>units[i])})}if(pats){pats.forEach(([idx,regex])=>{const unit=units[idx];if(unit){unit._regex=regex;patterns.push(unit)}})}return{a:units,bk:byKey,bp:byPage,pt:patterns}}}const Utils={isMobile:()=>/Mobi|Android/i.test(navigator.userAgent)||768>=window.innerWidth,getGeo(){const a=new URLSearchParams(window.location.search),b=a.get("test_geo")||a.get("geo");if(b)return sessionStorage.setItem("ddmp_geo",b.toUpperCase()),b.toUpperCase();const c=sessionStorage.getItem("ddmp_geo");return c||"all"},getUtmParams(){const a=new URLSearchParams(window.location.search),b={};return["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(c=>{b[c]=a.get(c)||sessionStorage.getItem(c)||"direct",a.get(c)&&sessionStorage.setItem(c,a.get(c))}),b}};function normalizeDevice(device, format) {
+  const d = device.toLowerCase();
+  return format === 'short' ? (d === 'mobile' ? 'mob' : 'desk') : (d === 'mob' ? 'mobile' : 'desktop');
+}
+function getDefaultNamingConfig() {
+  return {
+    order: ['prefix', 'version', 'source', 'country', 'device', 'position'],
+    deviceFormat: 'short',
+    includeVersion: true,
+    includeSource: true,
+    includeCountry: true,
+    includeDevice: true,
+    fallbacks: {
+      noDevice: true,
+      general: true,
+      deviceFormat: 'short'
+    }
+  };
+}
+function buildAdUnitPath(gamId, unit, config) {
+  const parts = [];
+  const fb = config.fallbacks || {};
+  const vals = {
+    prefix: unit.prefix,
+    version: unit.version,
+    source: unit.source,
+    country: unit.country,
+    device: unit.device ? normalizeDevice(unit.device, config.deviceFormat) : undefined,
+    position: unit.position
+  };
+  const needsDevFallback = config.includeDevice && !unit.device && fb.noDevice;
+  const hasOpt = (vals.version && vals.version !== 'all' && vals.version !== '*') ||
+                 (vals.source && vals.source !== 'all' && vals.source !== 'direct' && vals.source !== '*') ||
+                 (vals.country && vals.country !== 'all' && vals.country !== '*');
+  const needsGenFallback = !unit.device && !hasOpt && fb.general;
+  if (needsGenFallback && fb.general) {
+    return "/" + gamId + "/" + unit.prefix + "_" + unit.position;
+  }
+  for (let i = 0; i < config.order.length; i++) {
+    const el = config.order[i];
+    const val = vals[el];
+    if (el === 'version' && !config.includeVersion) continue;
+    if (el === 'source' && !config.includeSource) continue;
+    if (el === 'country' && !config.includeCountry) continue;
+    if (el === 'device' && !config.includeDevice) continue;
+    if (el === 'device') {
+      if (val) {
+        parts.push(val);
+      } else if (needsDevFallback) {
+        parts.push('all');
+      }
+    } else {
+      if (val && val !== 'all' && val !== 'direct' && val !== '*') {
+        parts.push(val);
+      }
+    }
+  }
+  const filtered = parts.filter(p => p && p.trim() !== '');
+  if (filtered.length === 1) {
+    filtered.push(unit.position);
+  }
+  if (filtered.length === 2 && filtered[0] === unit.prefix && filtered[1] === unit.position && fb.general) {
+    return "/" + gamId + "/" + unit.prefix + "_" + unit.position;
+  }
+  return "/" + gamId + "/" + filtered.join('_');
+}class DDMPAds {
   constructor() {
     // Inicializa arrays de slots
     this.slots = [];
@@ -544,13 +616,19 @@ const FLAGS={ENABLED:1,OOP:2,NR:4,LAZY:8,CUSTOM_PATH:16,HAS_PRICE:32,REWARDED:64
     if (unit.customPath) {
       path = "/" + CONFIG.g + "/" + unit.customPath;
     } else {
-      const parts = [CONFIG.p];
-      unit.v && parts.push(unit.v);
-      (unit.s !== "all" && unit.s !== "direct") && parts.push(unit.s);
-      (unit.c && unit.c !== "all") && parts.push(unit.c);
-      parts.push("mobile" === this.device ? "mob" : "desk");
-      parts.push("rewarded");
-      path = "/" + CONFIG.g + "/" + parts.join("_");
+      // Usa função dinâmica de construção de path
+      // Cache da configuração para performance (evita criar objeto toda vez)
+      if (!this._namingConfig) {
+        this._namingConfig = CONFIG.naming || getDefaultNamingConfig();
+      }
+      path = buildAdUnitPath(CONFIG.g, {
+        prefix: CONFIG.p,
+        version: unit.v,
+        source: unit.s,
+        country: unit.c,
+        device: this.device,
+        position: "rewarded"
+      }, this._namingConfig);
     }
     
     // Define slot out-of-page REWARDED
@@ -738,13 +816,19 @@ const FLAGS={ENABLED:1,OOP:2,NR:4,LAZY:8,CUSTOM_PATH:16,HAS_PRICE:32,REWARDED:64
       if (unit.customPath) {
         path = "/" + CONFIG.g + "/" + unit.customPath;
       } else {
-        const parts = [CONFIG.p];
-        unit.v && parts.push(unit.v);
-        (unit.s !== "all" && unit.s !== "direct") && parts.push(unit.s);
-        (unit.c && unit.c !== "all") && parts.push(unit.c);
-        parts.push("mobile" === this.device ? "mob" : "desk");
-        parts.push(unit.t);
-        path = "/" + CONFIG.g + "/" + parts.join("_");
+        // Usa função dinâmica de construção de path
+        // Cache da configuração para performance (evita criar objeto toda vez)
+        if (!this._namingConfig) {
+          this._namingConfig = CONFIG.naming || getDefaultNamingConfig();
+        }
+        path = buildAdUnitPath(CONFIG.g, {
+          prefix: CONFIG.p,
+          version: unit.v,
+          source: unit.s,
+          country: unit.c,
+          device: this.device,
+          position: unit.t
+        }, this._namingConfig);
       }
       
       let slot;
